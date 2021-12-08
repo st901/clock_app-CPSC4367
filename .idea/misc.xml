@@ -4,6 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5615384615384615" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.25277777777777777" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/layout/activity_main.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/layout/content_main.xml" value="0.4832427536231884" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/layout/fragment_first.xml" value="0.4832427536231884" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/layout/fragment_item.xml" value="0.33125" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/layout/fragment_item_list.xml" value="0.33125" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/layout/fragment_second.xml" value="0.4832427536231884" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3648148148148148" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/menu/menu_main.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/clock_app-CPSC4367/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25277777777777777" />
       </map>
     </option>
   </component>
