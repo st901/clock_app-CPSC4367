@@ -7,11 +7,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,13 +29,17 @@ public class MainActivity extends AppCompatActivity {
     // TODO 05. We store a reference to our new BottomNavigationView
     private BottomNavigationView topNavigationView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         viewPager = findViewById(R.id.pager_two);
         topNavigationView = findViewById(R.id.top_navigation);
-        pageAdapter = new ScreenSlidePagerAdapter(this);
+ //       pageAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pageAdapter);
         // TODO 06. Make sure we have already created a view pager
         // TODO 07. Create and add a OnNavigationItemSelectedListener to the BottomNavigationView
@@ -74,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         badge.setNumber(badge.getNumber() + 1);
     }
 
-    private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
+   /* private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
 
         public ScreenSlidePagerAdapter(@NonNull FragmentActivity fragmentActivity) {
             super(fragmentActivity);
@@ -97,5 +105,5 @@ public class MainActivity extends AppCompatActivity {
         public int getItemCount() {
             return NUM_PAGES;
         }
-    }
+    } */
 }
