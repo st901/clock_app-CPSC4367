@@ -92,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
                     return new Clock();
                 case ALARM_FRAGMENT_IDX:
                     return new Alarm();
+                case WORLD_FRAGMENT_IDX:
+                    return new Alarm();
+                case TIMER_FRAGMENT_IDX:
+                    return new Alarm();
+                case STOPWATCH_FRAGMENT_IDX:
+                    return new Alarm();
                 default:
                     return null;
             }
