@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int CLOCK_FRAGMENT_IDX = 0;
     private static final int ALARM_FRAGMENT_IDX = 1;
+    private static final int WORLD_FRAGMENT_IDX = 2;
+    private static final int TIMER_FRAGMENT_IDX = 3;
+    private static final int STOPWATCH_FRAGMENT_IDX = 4;
 
     private ViewPager2 viewPager;
     private FragmentStateAdapter pageAdapter;
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.pager_two);
         topNavigationView = findViewById(R.id.top_navigation);
- //       pageAdapter = new ScreenSlidePagerAdapter(this);
+//        pageAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pageAdapter);
         topNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -50,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_alarm:
                         viewPager.setCurrentItem(ALARM_FRAGMENT_IDX, true);
                         return true;
+                    case R.id.nav_world:
+                        viewPager.setCurrentItem(WORLD_FRAGMENT_IDX, true);
+                        return true;
+                    case R.id.nav_timer:
+                        viewPager.setCurrentItem(TIMER_FRAGMENT_IDX, true);
+                        return true;
+                    case R.id.nav_stopwatch:
+                        viewPager.setCurrentItem(STOPWATCH_FRAGMENT_IDX, true);
+                        return true;
+
                     default:
                         return false;
                 }
