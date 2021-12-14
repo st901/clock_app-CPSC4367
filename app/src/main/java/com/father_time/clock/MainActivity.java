@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
     private FragmentStateAdapter pageAdapter;
-    // TODO 05. We store a reference to our new BottomNavigationView
     private BottomNavigationView topNavigationView;
 
 
@@ -41,18 +40,12 @@ public class MainActivity extends AppCompatActivity {
         topNavigationView = findViewById(R.id.top_navigation);
  //       pageAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pageAdapter);
-        // TODO 06. Make sure we have already created a view pager
-        // TODO 07. Create and add a OnNavigationItemSelectedListener to the BottomNavigationView
         topNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                // TODO 08. We'll have to set the current page of the view pager based on the
-                //  id of the currently selected menu item in the BottomNavigationView
                 switch (item.getItemId()) {
                     case R.id.nav_clock:
                         viewPager.setCurrentItem(CLOCK_FRAGMENT_IDX);
-                        // TODO 10. We can associate a badge with a menu item
-                        incrementBadgeValue();
                         return true;
                     case R.id.nav_alarm:
                         viewPager.setCurrentItem(ALARM_FRAGMENT_IDX, true);
@@ -62,24 +55,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        // TODO 09. We'll have to register a new OnPageChangeCallback to set the corresponding tab
-        //  whenever the user makes a swipe gesture and changes the current selected page.
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                // TODO 09.01. We get the MenuItem in the given position
                 MenuItem selectedItem = topNavigationView.getMenu().getItem(position);
-                // TODO 09.02. We set the selected item id of the bottom navigation menu
                 topNavigationView.setSelectedItemId(selectedItem.getItemId());
             }
         });
-    }
-
-    // TODO 10. We can associate a badge with a menu item and modify the number within
-    private void incrementBadgeValue() {
-        BadgeDrawable badge = topNavigationView.getOrCreateBadge(R.id.nav_clock);
-        badge.setNumber(badge.getNumber() + 1);
     }
 
    /* private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
