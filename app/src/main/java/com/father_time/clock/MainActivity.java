@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.pager_two);
         topNavigationView = findViewById(R.id.top_navigation);
-        pageAdapter = new ScreenSlidePagerAdapter(this);
+//        pageAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pageAdapter);
         topNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
+  /*  private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
 
         public ScreenSlidePagerAdapter(@NonNull FragmentActivity fragmentActivity) {
             super(fragmentActivity);
@@ -98,5 +98,5 @@ public class MainActivity extends AppCompatActivity {
         public int getItemCount() {
             return NUM_PAGES;
         }
-    }
+    } */
 }
