@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 
 public class World extends Fragment {
@@ -24,10 +22,10 @@ public class World extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_world, container, false);
-        RecyclerView recyclerViewWorld = view.findViewById(R.id.rvAlarms);
-        recyclerViewWorld.setHasFixedSize(true);
-        recyclerViewWorld.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        //RecyclerView recyclerViewWorld = view.findViewById(R.id.rvAlarms);
+        //recyclerViewWorld.setHasFixedSize(true);
+        //recyclerViewWorld.setLayoutManager(new LinearLayoutManager(view.getContext()));
         // recyclerViewWorld.setAdapter(new RecyclerViewAdapterWorld(1234));
-        return inflater.inflate(R.layout.fragment_world, container, false);
+        return view;
     }
 }

@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@color/transparent"
     android:clipChildren="false"
-    android:clipToPadding="false"
-    android:layoutDirection="ltr">
+    android:clipToPadding="false">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/face"

@@ -30,6 +30,6 @@ public class Alarm extends Fragment {
         recyclerViewAlarms.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerViewAlarms.setAdapter(new RecyclerViewAdapterAlarm(1234));
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_alarm, container, false);
+        return view;
     }
 }
