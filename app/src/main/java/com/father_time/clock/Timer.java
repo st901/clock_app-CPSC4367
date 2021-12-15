@@ -11,13 +11,11 @@ import java.util.Locale;
 
 public class Timer extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 600000;
-
-    private TextView timer_TextView;
-    private Button timer_Start_Button;
     String StartLabel = "Start";
     String PauseLabel = "Pause";
     String ResetLabel = "Reset";
-
+    private TextView timer_TextView;
+    private Button timer_Start_Button;
     private CountDownTimer mCountDownTimer;
 
     private boolean mTimerRunning;

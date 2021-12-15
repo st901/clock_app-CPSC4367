@@ -5,19 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.Calendar;
 
 public class StopwatchPage extends Fragment {
 
-    public StopwatchPage() {
-        // Required empty public constructor
-    }
-
-    public static StopwatchPage newInstance() {
-        return new StopwatchPage();
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +31,7 @@ public class StopwatchPage extends Fragment {
                 .setColor(0);
     }
 
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

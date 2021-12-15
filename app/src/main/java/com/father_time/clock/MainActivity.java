@@ -1,5 +1,6 @@
 package com.father_time.clock;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -24,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
     private BottomNavigationView topNavigationView;
+    private FragmentStateAdapter pageAdapter;
 
-
+    @SuppressWarnings("deprecation")
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.pager_two);
         topNavigationView = findViewById(R.id.top_navigation);
-        FragmentStateAdapter pageAdapter = new ScreenSlidePagerAdapter(this);
+        pageAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pageAdapter);
         topNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 case STOPWATCH_FRAGMENT_IDX:
                     return new StopwatchPage();
                 default:
-                    return new Clock();
+                    return null;
             }
         }
 
