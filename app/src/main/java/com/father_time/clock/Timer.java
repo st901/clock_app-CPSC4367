@@ -44,6 +44,8 @@ public class Timer extends AppCompatActivity {
             }
         });
 
+        timer_Reset_Button = findViewById(R.id.timerReset_button);
+
         timer_Reset_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
