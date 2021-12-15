@@ -15,6 +15,7 @@ public class Timer extends AppCompatActivity {
 
     private TextView timer_TextView;
     private Button timer_Start_Button;
+    private Button timer_Reset_Button;
 
     private CountDownTimer mCountDownTimer;
 
@@ -42,6 +43,14 @@ public class Timer extends AppCompatActivity {
                 }
             }
         });
+
+        timer_Reset_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetTimer();
+            }
+
+        });
     }
 
     private void startTimer() {
@@ -61,7 +70,7 @@ public class Timer extends AppCompatActivity {
         }.start();
 
         mTimerRunning = true;
-        timer_Start_Button.setText("pause");
+        timer_Start_Button.setText("Pause");
 
 
     }
@@ -72,6 +81,11 @@ public class Timer extends AppCompatActivity {
         timer_Start_Button.setText("Start");
 
 
+    }
+
+    private void resetTimer() {
+        mTimeLeftInMillis = START_TIME_IN_MILLIS;
+        updateCountDownText();
     }
 
     private void updateCountDownText() {
