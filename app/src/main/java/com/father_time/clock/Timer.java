@@ -2,7 +2,6 @@ package com.father_time.clock;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -15,7 +14,9 @@ public class Timer extends AppCompatActivity {
 
     private TextView timer_TextView;
     private Button timer_Start_Button;
-    private Button timer_Reset_Button;
+    String StartLabel = "Start";
+    String PauseLabel = "Pause";
+    String ResetLabel = "Reset";
 
     private CountDownTimer mCountDownTimer;
 
@@ -33,46 +34,38 @@ public class Timer extends AppCompatActivity {
 
         timer_Start_Button = findViewById(R.id.timerStart_button);
 
-        timer_Start_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mTimerRunning) {
-                    pauseTimer();
-                } else {
-                    startTimer();
-                }
+        timer_Start_Button.setOnClickListener(v -> {
+            if (mTimerRunning) {
+                pauseTimer();
+            } else {
+                startTimer();
             }
         });
 
-        timer_Reset_Button = findViewById(R.id.timerReset_button);
+        Button timer_Reset_Button = findViewById(R.id.timerReset_button);
 
-        timer_Reset_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetTimer();
-            }
-
-        });
+        timer_Reset_Button.setOnClickListener(v -> resetTimer());
     }
 
     private void startTimer() {
-        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000)  {
+        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 mTimeLeftInMillis = millisUntilFinished;
                 updateCountDownText();
             }
+
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                timer_Start_Button.setText("Start");
+                timer_Start_Button.setText(StartLabel);
 
 
             }
         }.start();
 
         mTimerRunning = true;
-        timer_Start_Button.setText("Pause");
+        timer_Start_Button.setText(PauseLabel);
 
 
     }
@@ -80,7 +73,7 @@ public class Timer extends AppCompatActivity {
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
-        timer_Start_Button.setText("Start");
+        timer_Start_Button.setText(StartLabel);
 
 
     }

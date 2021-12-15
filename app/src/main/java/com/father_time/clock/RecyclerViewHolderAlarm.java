@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewHolderAlarm extends RecyclerView.ViewHolder {
 
-    private TextView view;
+    private final TextView view;
+
     public RecyclerViewHolderAlarm(@NonNull View itemView) {
         super(itemView);
         view = itemView.findViewById(R.id.randomText);
     }
 
-    public TextView getView(){
+    public TextView getView() {
         return view;
     }
 

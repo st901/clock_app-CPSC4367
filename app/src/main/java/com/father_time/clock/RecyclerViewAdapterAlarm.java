@@ -7,13 +7,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.father_time.clock.R;
-import com.father_time.clock.RecyclerViewHolderAlarm;
-
 import java.util.Random;
 
 public class RecyclerViewAdapterAlarm extends RecyclerView.Adapter<RecyclerViewHolderAlarm> {
-    private Random random;
+    private final Random random;
 
     public RecyclerViewAdapterAlarm(int seed) {
         this.random = new Random(seed);

@@ -24,7 +24,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="113dp"
         android:layout_marginBottom="265dp"
-        android:text="Start" />
+        android:text="@string/button_start" />
 
     <Button
         android:id="@+id/timerReset_button"
@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="208dp"
         android:layout_marginBottom="265dp"
-        android:text="Reset" />
+        android:text="@string/button_reset" />
 
 
 </RelativeLayout>
